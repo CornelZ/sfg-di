@@ -6,6 +6,7 @@ import guru.springframework.sfgdi.controllers.MyController;
 import guru.springframework.sfgdi.controllers.PropertyInjectedController;
 import guru.springframework.sfgdi.controllers.SetterInjectedController;
 import guru.springframework.sfgdi.examplebeans.FakeDataSource;
+import guru.springframework.sfgdi.examplebeans.FakeJmsBroker;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -43,5 +44,9 @@ public class SfgDiApplication {
     System.out.println("---fakedatasource");
 
     System.out.println(ctx.getBean(FakeDataSource.class).toString());
+
+    System.out.println("---FakeJmsBroker");
+
+    System.out.println(ctx.getBean(FakeJmsBroker.class).toString());
   }
 }
