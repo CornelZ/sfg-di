@@ -1,0 +1,17 @@
+# this is a comment
+
+name: John
+names: # inline comment
+  - John01
+  - John02
+  - John03
+    
+pund_sign: "#"
+
+book:
+  author: John doe
+  publisher: random house
+
+truth: yes # bool
+another_true: True # bool
+more_true: true # bool
