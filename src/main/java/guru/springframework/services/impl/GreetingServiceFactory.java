@@ -1,4 +1,7 @@
-package guru.springframework.services;
+package guru.springframework.services.impl;
+
+import guru.springframework.services.interfaces.GreetingRepository;
+import guru.springframework.services.interfaces.GreetingService;
 
 public class GreetingServiceFactory {
   private GreetingRepository greetingRepository;

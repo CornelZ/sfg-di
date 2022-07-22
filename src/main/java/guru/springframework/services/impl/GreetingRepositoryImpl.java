@@ -1,5 +1,6 @@
-package guru.springframework.services;
+package guru.springframework.services.impl;
 
+import guru.springframework.services.interfaces.GreetingRepository;
 import org.springframework.stereotype.Component;
 
 @Component

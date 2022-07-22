@@ -3,3 +3,11 @@ guru:
     username: JMS Username
     password: somepass
     url: SomeURL
+---
+spring:
+  config:
+    activate:
+      on-profile: ES
+guru:
+  jms:
+    username: JMS Username SPANISSSHHHHHH
