@@ -5,13 +5,19 @@ import guru.springframework.sfgdi.controllers.I18nController;
 import guru.springframework.sfgdi.controllers.MyController;
 import guru.springframework.sfgdi.controllers.PropertyInjectedController;
 import guru.springframework.sfgdi.controllers.SetterInjectedController;
+import guru.springframework.sfgdi.examplebeans.FakeDataSource;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"guru.springframework.services", "guru.springframework.sfgdi"})
+@ComponentScan(
+    basePackages = {
+      "guru.springframework.services",
+      "guru.springframework.sfgdi",
+      "guru.springframework.config"
+    })
 public class SfgDiApplication {
 
   public static void main(String[] args) {
@@ -33,5 +39,9 @@ public class SfgDiApplication {
     System.out.println("---i18nController");
     I18nController i18nController = (I18nController) ctx.getBean("i18nController");
     System.out.println(i18nController.sayHello());
+
+    System.out.println("---fakedatasource");
+
+    System.out.println(ctx.getBean(FakeDataSource.class).toString());
   }
 }
